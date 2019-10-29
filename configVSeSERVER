@@ -1,0 +1,99 @@
+Plugins VSCODE: 
+-todos da rocketseat
+-eslint
+-prettier
+-material icon
+-tema que eu uso: dracula
+
+Configurações VSCODE json:
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 0,
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 24,
+    "editor.formatOnSave": true,
+    "eslint.validate": [
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        },
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        }
+    ],
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.tabSize": 2,
+    "editor.renderLineHighlight": "gutter",
+    "terminal.integrated.fontSize": 14,
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "breadcrumbs.enabled": true,
+    "editor.parameterHints.enabled": false,
+    "prettier.eslintIntegration": true,
+
+Extensões que tem que instalar:
+-yarn sempre!! usar yarn init -y pra criar o arquivo package.json
+-usar -D em eslint, nodemon, sucrase e sequelize-cli
+-não usar -D em express, pg, pg-hstore e sequelize
+-criar arquivo nodemon.json e colocar:
+{
+  "execMap": {
+    "js": "sucrase-node"
+  }
+}
+-meu package.json:
+{
+  "name": "Modulo2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "nodemon": "^1.19.4",
+    "sequelize-cli": "^5.5.1",
+    "sucrase": "^3.10.1"
+  }
+}
+
+O que instalar para conseguir funcionar o postgresql com docker e postbird
+
+#não lembro como instala o docker e o postbird
+
+Instalar o docker, hora que der docker run colocar postgres:10.8 (versão que fincona no postbird)
+
+Criar o usuario postgres, tem que colocar o método TRUST no arquivo pg_hba.conf, inicia o psql e troca a senha
+
+Pronto, container configurado.
+
+
+Para iniciar o postbird tem que dar 
+ systemctl start apparmor
+ postbird -h
+
+Só com isso ja irá funcionar
