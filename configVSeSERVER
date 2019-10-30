@@ -51,7 +51,7 @@ Configurações VSCODE json:
 Extensões que tem que instalar:
 -yarn sempre!! usar yarn init -y pra criar o arquivo package.json
 -usar -D em eslint, nodemon, sucrase e sequelize-cli
--não usar -D em express, pg, pg-hstore, sequelize e bcryptjs
+-não usar -D em express, pg, pg-hstore, sequelize, jsonwebtoken e bcryptjs
 -criar arquivo nodemon.json e colocar:
 {
   "execMap": {
